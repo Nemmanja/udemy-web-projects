@@ -1,0 +1,210 @@
+:root {
+  --bg-start: #eef5ff;
+  --bg-end: #f9fbff;
+  --card: #ffffff;
+  --primary: #3b82f6;
+  --primary-soft: #e0ecff;
+  --primary-dark: #2563eb;
+  --danger: #ef4444;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #dbeafe;
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+}
+
+/* LAYOUT */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+/* ADD SECTION */
+
+.add-section {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  background: var(--card);
+  padding: 1.8rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(30, 64, 175, 0.08);
+}
+
+.add-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* FORMS */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  background: #fbfdff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+}
+
+/* BUTTONS */
+
+button {
+  align-self: flex-end;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+}
+
+.delete-btn {
+  background: transparent;
+  color: var(--danger);
+  font-size: 0.85rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+  box-shadow: none;
+  transform: none;
+}
+
+/* NOTES SECTION */
+
+.notes-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.notes-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* GRID FOR NOTES */
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  font-family: "Oswald", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* NOTE CARD */
+
+.note-card {
+  background: var(--card);
+  padding: 1.4rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(30, 64, 175, 0.12);
+}
+
+.edit-form input {
+  font-weight: 600;
+  background: var(--primary-soft);
+}
+
+.edit-form textarea {
+  background: #ffffff;
+}
+
+/* ACTIONS */
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.4rem;
+}
+
+/* EMPTY STATE */
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .add-section {
+    padding: 1.4rem;
+  }
+
+  button {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+.gravitas {
+  font-family: "Gravitas One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+

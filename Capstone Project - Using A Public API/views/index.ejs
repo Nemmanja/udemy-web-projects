@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Cocktail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body>
+    <div class="fullscreen-bg">
+        <div class="overlay"></div>
+        <div class="form-box">
+            <% if (locals.name) { %>
+                <div class="response-area">
+                    <h1> <%= name %></h1>
+                    <p><%= recipe %></p>
+                </div>
+            <% } else { %>
+                <h1>Random Cocktail Generator</h1>
+            <% } %>
+            <form method="POST">
+                <input id="get" type="submit" value="Generate" formaction="/random-cocktail">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

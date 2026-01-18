@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XTRACT</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+  }
+
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  /* Logo i linkovi zajedno */
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* razmak između loga i linkova */
+  }
+
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 21px;
+  }
+
+  .logo svg {
+    width: 40px;
+    height: 40px;
+    fill: black; /* ili po potrebi promeni */
+  }
+
+  /* Linkovi */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .nav-links a {
+    color: #fff; /* bele boje */
+    text-decoration: none; /* uklanja podvlačenje */
+    font-size: 16px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: #ccc; /* lagano svetlija boja na hover */
+  }
+
+  /* Dugme */
+  .book-btn {
+    background-color: rgb(129, 74, 200);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0.7px 0.7px -0.625px rgba(0,0,0,0.15),
+                0 1.8px 1.8px -1.25px rgba(0,0,0,0.145),
+                0 3.62px 3.62px -1.875px rgba(0,0,0,0.137),
+                0 6.87px 6.87px -2.5px rgba(0,0,0,0.125),
+                0 13.65px 13.65px -3.125px rgba(0,0,0,0.106),
+                0 30px 30px -3.75px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .nav-left {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .book-btn {
+      margin-top: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <!-- Logo -->
+    <a href="./" class="logo">
+      <svg viewBox="0 0 512 512">
+        <circle cx="256" cy="256" r="256"/>
+      </svg>
+      XTRACT
+    </a>
+  </div>
+
+  <!-- Dugme -->
+   <!-- Navigacija -->
+    <div class="nav-links">
+        <a href="./">Home</a>
+        <a href="./about">About</a>
+        <a href="./blog">Blog</a>
+        <a href="./contact">Contact</a>
+    </div>
+  <a href="https://cal.com" target="_blank" class="book-btn">Book a call</a>
+</nav>
+
+</body>
+</html>
